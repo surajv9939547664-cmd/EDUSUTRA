@@ -363,10 +363,9 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args):
         pass
 
+import os
 
 if __name__ == "__main__":
     print("EDUSUTRA chal raha hai: http://localhost:8000")
     print("Band karne ke liye Ctrl + C dabayein.")
-   import os
-
-HTTPServer(("0.0.0.0", int(os.environ.get("PORT", 10000))), Handler).serve_forever()
+    HTTPServer(("0.0.0.0", int(os.environ.get("PORT", 10000))), Handler).serve_forever()
